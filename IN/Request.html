@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Songs - Local Player</title>
+  <link rel="stylesheet" href="Request.css">
+      <link href="Navbar.css" rel="stylesheet" />
+
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="navbar-nav">
+      <li class="logo">
+        <a class="nav-link" href="index.html">
+                    <img src="https://i.postimg.cc/VNtW2Jp6/Screenshot-2025-08-16-140329.png" />
+          <span class="link-text">Harmonic</span>
+        </a>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-home"></i><span class="link-text">Home</span></a></li>
+      <li class="nav-item"><a class="nav-link" href="Library.html"><i class="fas fa-music"></i><span class="link-text">Library</span></a></li>
+      <li class="nav-item"><a class="nav-link active" href="Request.html"><i class="fas fa-compact-disc"></i><span class="link-text">Request Songs</span></a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1><i class="fas fa-compact-disc"></i> Request Songs (Local Player)</h1>
+    <p>Select songs from your device and play them instantly.</p>
+
+    <!-- Upload button -->
+    <label for="songInput" class="upload-btn">
+      <i class="fas fa-upload"></i> Add Songs
+    </label>
+    <input type="file" id="songInput" accept="audio/*" multiple hidden>
+
+    <!-- Playlist -->
+    <ul id="playlist"></ul>
+
+    <!-- Modern Player -->
+    <div id="playerControls">
+      <div class="cd-container">
+        <i class="fas fa-compact-disc cd-icon"></i>
+      </div>
+      <p id="currentSong">No song selected</p>
+      <audio id="audioPlayer" controls></audio>
+    </div>
+  </main>
+
+  <script src="Request.js"></script>
+</body>
+</html>

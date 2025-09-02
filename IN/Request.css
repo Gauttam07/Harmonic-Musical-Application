@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #e75480, #ff8ba0);
+  color: #fff;
+  text-align: center;
+}
+
+main {
+  margin-left: 6rem; /* leave space for navbar */
+  padding: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.upload-btn {
+  display: inline-block;
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+  color: #e75480;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s;
+}
+
+.upload-btn:hover {
+  transform: scale(1.05);
+  background: #ffe4ec;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem auto;
+  max-width: 450px;
+}
+
+#playlist li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 1rem;
+  margin: 0.4rem 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#playlist li:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.02);
+}
+
+#playerControls {
+  margin-top: 2rem;
+}
+
+.cd-container {
+  margin: 1rem auto;
+  font-size: 5rem;
+  color: white;
+}
+
+.cd-icon {
+  display: inline-block;
+  animation: spin 4s linear infinite;
+  animation-play-state: paused; /* pause by default */
+}
+
+.playing .cd-icon {
+  animation-play-state: running;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+audio {
+  margin-top: 1rem;
+  width: 80%;
+  max-width: 400px;
+}
